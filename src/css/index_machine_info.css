@@ -1,0 +1,117 @@
+.machine_body{
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+.machine_body_left{
+    float: left;
+    width: 585px;
+    height: 906px;
+    margin-top: 38px;
+    margin-left: 49px;
+    border: 1px solid #5880F4;
+}
+.machine_body_head{
+    float: left;
+    width: 100%;
+    height: 64px;
+}
+.machine_line1{
+    width: 584px;
+    margin-left: 0.5px;
+    background-color: #D6E1EE;
+}
+.machine_body_img{
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin-top: 21px;
+    margin-left: 24px;
+}
+.machine_body_text1{
+    float: left;
+    width: 86px;
+    height: 22px;
+    margin-left: 7px;
+    margin-top: 22px;
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #5880F4;
+    line-height: 23px;
+}
+.machine_body_true{
+    width: 40px;
+    height: 20px;
+    margin-top: 24px;
+    margin-left: 378px;
+    font-size: 16px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #5880F4;
+    line-height: 45px;
+}
+.machine_body_body{
+    float: left;
+    width: 100%;
+    height: 841px;
+}
+.machine_left_info{
+    float: left;
+    width: 80%;
+    height: 441px;
+    border: 1px solid #5880F4;
+}
+.machine_public_info{
+    float: left;
+    width:96px ;
+    height: 32px;
+    color: #5880f4;
+    font-size: 20px;
+    line-height: 35px;
+}
+.machine_public_text{
+    float: left;
+    width: 258px;
+    height: 45px;
+    border: 1px solid #D6E1EE;
+    border-radius: 1px;
+}
+.machine_net{
+    margin-top: 41px;
+    margin-left: 40px;
+}
+.machine_net_text{
+    margin-top: 30px;
+    margin-left: 30px;
+  
+}
+.machine_num{
+    margin-top: 32px;
+    margin-left: 32px;
+}
+.machine_num_text{
+    margin-left: 30px;
+    margin-top: 23px;
+}
+
+
+
+
+.machine_body_middle{
+    float: left;
+    width: 585px;
+    height: 906px;
+    margin-top: 38px;
+    margin-left: 35px;
+    border: 1px solid #5880F4;
+}
+
+.machine_body_right{
+    float: left;
+    width: 585px;
+    height: 906px;
+    margin-top: 38px;
+    margin-left: 35px;
+    border: 1px solid #5880F4;
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>圆环图案例</title>
+		<!-- 引入 ECharts 文件 -->
+		<link rel="stylesheet" href="../css/head_public.css">
+		<link rel="stylesheet"  href="../css/index_day_chanbao.css">
+		<script src="../js/net-js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!-- 为 ECharts 准备一个具备大小（宽高）的 容器 -->
+		<div id="day_chanbao" class="day_boby" >
+			<div id="day_left" class="day_left_body">
+				<div id="chart_day1" class="day_time"></div>
+				<!--时间表-->
+				<div class="day_left_body1">
+					<div class="day_start_time1">
+						<div class="day_starttime">08:00</div>
+						<div class="day_starttime_text">开机时间</div>
+					</div>
+					<div class="day_run_time1">
+						<div class="day_starttime">12小时20分</div>
+						<div class="day_starttime_text">运行时间</div>
+					</div>
+				</div>
+                
+                <div class="day_left_body2">
+					<div class="day_work_time1">
+						<div class="day_worktime1">5小时10分</div>
+						<div class="day_worktime_text1">加工时间</div>
+					</div>
+					<div class="day_work_time2">
+						<div class="day_worktim2">O12345</div>
+						<div class="day_worktime_text2">当前加工程序</div>
+					</div>
+				</div>
+			</div>
+				<!--班次时间表-->
+			<div class="day_right_body">
+				<div class="time_table">
+					<div class="time_table_head">
+						<img src="../img/time_table.png" class="img_time_table">
+						<span class="time_table_text">第k班生产时间表</span>
+					</div>
+					<div class="time_table_bodys">
+						<div id ="chart_day2" class="time_table_body"></div>
+						<div class="time_table_body1">
+							<div class="time_table_t">
+								<!--第一个方块-->
+								<div class="time_table_st">
+									<div class="time_table_t1">08:00</div>
+									<div class="time_table_tx">开机时间</div>
+								</div>
+								<div class="shuxian1"></div>
+								<div class="time_table_st1">
+									<div class="time_table_t1">6小时20分</div>
+									<div class="time_table_tx1">运行时间</div>
+								</div>
+								<div class="shuxian2"></div>
+								<div class="time_table_st2">
+									<div class="time_table_t2">5小时10分</div>
+									<div class="time_table_tx2">加工时间</div>
+								</div>
+							</div>
+							<input type="button" class="start_bt" value="开始">	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	// 基于准备好的容器(这里的容器是id为chart1的div)，初始化echarts实例
+	var chart1 = echarts.init(document.getElementById("chart_day1"));
+	
+	// 圆环图各环节的颜色
+	var color = ['#FF5666', '#FDD344', '#5ED8A9', '#DCE1ED'];
+	
+	// 圆环图各环节的名称和值(系列中各数据项的名称和值)
+	var data =[{  
+	                name: '报警',
+	                value: 320
+	            },{
+	                name: '待机',
+	                value: 586
+	            },{
+	                name: '运行',
+	                value: 874
+	            },{
+	                name: '离线',
+	                value: 725
+	            }];
+	  
+	// 指定图表的配置项和数据
+	var option = {	
+	    // 标题
+	    title: [{
+	        text: '全天生产时间表',
+	        top:'8%',
+	        left:'14%',
+	        textStyle:{
+	            color: '#2B3155',
+                fontSize:18,
+	        }
+	    }],
+	    
+	    // 图例
+	    legend: [{
+	        selectedMode:true,             // 图例选择的模式，控制是否可以通过点击图例改变系列的显示状态。默认开启图例选择，可以设成 false 关闭。
+	        top: '95%',
+	        left: 'center',
+	        textStyle: {                      // 图例的公用文本样式。
+	            fontSize: 14,
+	            color: '#111632'
+       		},
+	        data: ['报警','待机','运行','离线']
+	    }],
+	    
+	    // 提示框
+	    tooltip: {
+	        show: true,                 // 是否显示提示框
+	        formatter: '{b} </br> 销量{c}件 </br> 占比{d}%'      // 提示框显示内容,此处{b}表示各数据项名称，此项配置为默认显示项，{c}表示数据项的值，默认不显示，({d}%)表示数据项项占比，默认不显示。
+	    },
+	    
+	    // graphic 是原生图形元素组件。可以支持的图形元素包括：image, text, circle, sector, ring, polygon, polyline, rect, line, bezierCurve, arc, group,
+	    graphic: {
+	        type: 'text',               // [ default: image ]用 setOption 首次设定图形元素时必须指定。image, text, circle, sector, ring, polygon, polyline, rect, line, bezierCurve, arc, group,
+	        top: '45%',              // 描述怎么根据父元素进行定位。top 和 bottom 只有一个可以生效。如果指定 top 或 bottom，则 shape 里的 y、cy 等定位属性不再生效。『父元素』是指：如果是顶层元素，父元素是 echarts 图表容器。如果是 group 的子元素，父元素就是 group 元素。
+	        left: 'center',             // 同上
+	        style: {
+	            text: '全天累计生产数量',       // 文本块文字。可以使用 \n 来换行。[ default: '' ]
+	            color:'#FFFFFF',           // 填充色。
+	            fontSize: 16,           // 字体大小
+	            fontWeight: 'bold'		// 文字字体的粗细，可选'normal'，'bold'，'bolder'，'lighter'
+	        }
+	    },
+	    
+	    // 系列列表
+	    series: [{
+	        name: '圆环图系列名称',         // 系列名称
+	        type: 'pie',                    // 系列类型 
+	        center:['50%','45%'],           // 饼图的中心（圆心）坐标，数组的第一项是横坐标，第二项是纵坐标。[ default: ['50%', '50%'] ]
+	        radius: ['40%', '50%'],         // 饼图的半径，数组的第一项是内半径，第二项是外半径。[ default: [0, '75%'] ]
+	        hoverAnimation: true,           // 是否开启 hover 在扇区上的放大动画效果。[ default: true ]
+	        color: color,                   // 圆环图的颜色
+	        label: {                        // 饼图图形上的文本标签，可用于说明图形的一些数据信息，比如值，名称等.
+	            normal: {
+	                show: true,             // 是否显示标签[ default: false ]
+	                position: 'outside',    // 标签的位置。'outside'饼图扇区外侧，通过视觉引导线连到相应的扇区。'inside','inner' 同 'inside',饼图扇区内部。'center'在饼图中心位置。
+	                formatter: '{b} : {c}件'  // 标签内容
+	            }
+	        },
+	        labelLine: {                    // 标签的视觉引导线样式,在 label 位置 设置为'outside'的时候会显示视觉引导线。
+	            normal: {
+	                show: true,             // 是否显示视觉引导线。
+	                length: 15,             // 在 label 位置 设置为'outside'的时候会显示视觉引导线。
+	                length2: 10,            // 视觉引导项第二段的长度。
+	                lineStyle: {            // 视觉引导线的样式
+	                    //color: '#000',
+	                    //width: 1
+	                }
+	            }
+	        },
+	        data: data                      // 系列中的数据内容数组。
+	    }]
+	};
+	
+	// 使用刚指定的配置项和数据显示图表
+	chart1.setOption(option)
+</script>
+<script type="text/javascript">
+	// 基于准备好的容器(这里的容器是id为chart1的div)，初始化echarts实例
+	var chart2 = echarts.init(document.getElementById("chart_day2"));
+	
+	// 圆环图各环节的颜色
+	var color = ['#FF5666', '#FDD344', '#5ED8A9', '#DCE1ED'];
+	
+	// 圆环图各环节的名称和值(系列中各数据项的名称和值)
+	var data =[{  
+	                name: '报警',
+	                value: 320
+	            },{
+	                name: '待机',
+	                value: 586
+	            },{
+	                name: '运行',
+	                value: 874
+	            },{
+	                name: '离线',
+	                value: 725
+	            }];
+	  
+	// 指定图表的配置项和数据
+	var option = {	
+	    // 图例
+	    legend: [{
+			orient:'vertical',
+	        selectedMode:true,             // 图例选择的模式，控制是否可以通过点击图例改变系列的显示状态。默认开启图例选择，可以设成 false 关闭。
+	        top: '20%',
+	        left: '65%',
+	        textStyle: {                      // 图例的公用文本样式。
+	            fontSize: 14,
+	            color: '#111632'
+			   },
+			   itemGap:20,
+			   type:'scroll',
+	        data: ['报警','待机','运行','离线']
+	    }],
+	    
+	    // 提示框
+	    tooltip: {
+	        show: true,                 // 是否显示提示框
+	        formatter: '{b} </br> 销量{c}件 </br> 占比{d}%'      // 提示框显示内容,此处{b}表示各数据项名称，此项配置为默认显示项，{c}表示数据项的值，默认不显示，({d}%)表示数据项项占比，默认不显示。
+	    },
+	    
+	    // graphic 是原生图形元素组件。可以支持的图形元素包括：image, text, circle, sector, ring, polygon, polyline, rect, line, bezierCurve, arc, group,
+	    graphic: {
+	        type: 'text',               // [ default: image ]用 setOption 首次设定图形元素时必须指定。image, text, circle, sector, ring, polygon, polyline, rect, line, bezierCurve, arc, group,
+	        top: '50%',              // 描述怎么根据父元素进行定位。top 和 bottom 只有一个可以生效。如果指定 top 或 bottom，则 shape 里的 y、cy 等定位属性不再生效。『父元素』是指：如果是顶层元素，父元素是 echarts 图表容器。如果是 group 的子元素，父元素就是 group 元素。
+	        left: '24%',             // 同上
+	        style: {
+	            text: '生产数量',       // 文本块文字。可以使用 \n 来换行。[ default: '' ]
+	            color:'#2B3155',           // 填充色。
+	            fontSize: 14,           // 字体大小
+	            fontWeight: 'bold'	// 文字字体的粗细，可选'normal'，'bold'，'bolder'，'lighter'
+	        }
+	    },
+	    
+	    // 系列列表
+	    series: [{
+	        name: '圆环图系列名称',         // 系列名称
+	        type: 'pie',                    // 系列类型 
+	        center:['30%','50%'],           // 饼图的中心（圆心）坐标，数组的第一项是横坐标，第二项是纵坐标。[ default: ['50%', '50%'] ]
+	        radius: ['40%', '60%'],         // 饼图的半径，数组的第一项是内半径，第二项是外半径。[ default: [0, '75%'] ]
+	        hoverAnimation: true,           // 是否开启 hover 在扇区上的放大动画效果。[ default: true ]
+	        color: color,                   // 圆环图的颜色
+	        label: {                        // 饼图图形上的文本标签，可用于说明图形的一些数据信息，比如值，名称等.
+	            normal: {
+	                show: true,             // 是否显示标签[ default: false ]
+	                position: 'outside',    // 标签的位置。'outside'饼图扇区外侧，通过视觉引导线连到相应的扇区。'inside','inner' 同 'inside',饼图扇区内部。'center'在饼图中心位置。
+	                formatter: '{b} : {c}件'  // 标签内容
+	            }
+	        },
+	        labelLine: {                    // 标签的视觉引导线样式,在 label 位置 设置为'outside'的时候会显示视觉引导线。
+	            normal: {
+	                show: true,             // 是否显示视觉引导线。
+	                length: 15,             // 在 label 位置 设置为'outside'的时候会显示视觉引导线。
+	                length2: 10,            // 视觉引导项第二段的长度。
+	                lineStyle: {            // 视觉引导线的样式
+	                    //color: '#000',
+	                    //width: 1
+	                }
+	            }
+	        },
+	        data: data                      // 系列中的数据内容数组。
+	    }]
+	};
+	
+	// 使用刚指定的配置项和数据显示图表
+	chart2.setOption(option)
+</script>

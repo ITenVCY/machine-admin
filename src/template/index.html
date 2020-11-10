@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>机床管家</title>
+  <link rel="stylesheet" href="../css/head_public.css">
+</head>
+
+<body>
+  <div id="head-navegation" class="cs-hd-ng">
+    <div class="cs-app-name-log">
+      <div class="cs-app-log">
+        <img src="../img/app-log.png">
+      </div>
+      <span class="cs-app-name">机床管家</span>
+    </div>
+    <div id="head-production-state" class="css-hd-sle head-pub" onclick="select_production_state()">
+      <div class="css-hd-img-pub">
+        <img src="../img/head-production-state.png" title="生产统计">
+      </div>
+      <span class="css-pub-text">生产统计</span>
+    </div>
+    <div id="head-machine-info" class="head-pub" onclick="select_machine_info()">
+      <div class="css-hd-img-pub">
+        <img src="../img/head-machine-info.png" title="机床档案">
+      </div>
+      <span class="css-pub-text">机床档案</span>
+    </div>
+    <div id="head-intelligent-app" class="head-pub" onclick="select_intelligent_app()">
+      <div class="css-hd-img-pub">
+        <img src="../img/head-intelligent-app.png" title="智能APP">
+      </div>
+      <span class="css-pub-text">智能APP</span>
+    </div>
+  </div>
+  <div id="head-selector-ifream" class="css-head-selector-ifream">
+    <iframe style="float: left;width:100%;height:100%;" id="frame_container" name="frame_container"scrolling="auto" frameborder="0" marginheight="0" 
+    src="../template/index_production_state.html">
+    </iframe>
+  </div>
+</body>
+<script>
+  window.$ = window.jQuery = require('../js/net-js/jquery.1.12.4.min.js'); 
+</script>
+<script type="text/javascript" src='../js/head_public.js'></script>
+</html>

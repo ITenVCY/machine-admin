@@ -1,0 +1,40 @@
+
+.css-left-navegation{
+  width:150px;
+  height: 100%;
+  background: #1BA0FF;
+  float: left;
+  text-align: center;
+}
+.css-right-ifream{
+  float: left;
+  width: 92%;
+  height: 100%;
+}
+
+.css-day-navegation{
+  width: 150px;
+  height: 110px;
+  margin-top: 40px;
+  color: #FFFFFFFF;
+  font-size: 16px;
+  font-family: Microsoft YaHei;
+  float: left;
+  cursor: pointer;
+}
+
+.css-navegation-img{
+    width: 100%;
+    height: 50px;
+    padding-top: 28px;
+}
+
+.css-lf-navegation-select{  
+ background: #FFFFFF;
+ color: #467FE6
+}
+
+.css-lf-navegation-font{  
+  font-size: 16px;
+  font-family: Microsoft YaHei;
+}

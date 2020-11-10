@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../css/head_public.css">
+    <link rel="stylesheet" href="../css/index_production_state.css">
+
+</head>
+<body>
+    <div class="css-left-navegation">
+        <div id = "day_state_id" class="css-day-navegation css-lf-navegation-select" onclick="day_state()">
+            <div id = "left-navegation-day" class = "css-navegation-img">
+                <img id = "day_img" src="../img/cb-select.png">
+            </div>
+            <span class="css-lf-navegation-font">当日产报</span>
+        </div>
+        <div id = "week_state_id" class="css-day-navegation" onclick="week_state()">
+            <div id = "left-navegation-day" class = "css-navegation-img">
+                <img id = "wek_img" src="../img/cb-no-select.png">
+            </div>
+            <span class="css-lf-navegation-font">当周产报</span>
+        </div>
+        <div id = "month_state_id" class="css-day-navegation" onclick="month_state()">
+            <div id = "left-navegation-day" class = "css-navegation-img">
+                <img id = "month_img" src="../img/cb-no-select.png">
+            </div>
+            <span class="css-lf-navegation-font">当月产报</span>
+        </div>
+        <div id = "old_month_state_id" class="css-day-navegation" onclick="old_month_state()">
+            <div id = "left-navegation-day" class = "css-navegation-img">
+                <img id = "old_month_img" src="../img/cb-no-select.png">
+            </div>
+            <span class="css-lf-navegation-font">上月产报</span>
+        </div>
+        <div id = "rang_class_id" class="css-day-navegation" onclick="range_class()">
+            <div id = "left-navegation-day" class = "css-navegation-img">
+                <img src="../img/pdc-class-select.png">
+            </div>
+            <span class="css-lf-navegation-font">排班</span>
+        </div>
+    </div>
+    <div id = "right-ifream" class="css-right-ifream">
+        <iframe style="float: left;width:100%;height:100%;" id="frame_container" scrolling="auto" frameborder="0" marginheight="0" 
+        src="../template/index_day_state.html">
+        </iframe>
+    </div>
+</body>
+    <script type="text/javascript" src='../js/net-js/jquery.1.12.4.min.js'></script>
+    <script type="text/javascript" src='../js/head_public.js'></script>
+    <script type="text/javascript" src='../js/index_production_state.js'></script>
+</html>

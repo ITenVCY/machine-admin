@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+html, body{
+height: 100%;
+overflow: hidden;
+}
+
+body{
+font-family:"Microsoft YaHei",Arial,Helvetica,sans-serif,"宋体";
+}
+
+::-webkit-scrollbar {/*滚动条整体样式*/
+width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+height: 1px;
+}
+::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+background: #535353;
+}
+::-webkit-scrollbar-track {/*滚动条里面轨道*/
+-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+border-radius: 10px;
+background: #EDEDED;
+}
+  
+@font-face{
+font-family: 'YaHeiSemibold';
+src : url('../fonts/Microsoft-YaHei-Semibold.ttc');
+}
+
+@font-face{
+  font-family: 'YaHeiHeavy';
+  src : url('../fonts/Microsoft-YaHei-Heavy.ttc');
+}
+
+@font-face{
+  font-family: 'YaHeiLight';
+  src : url('../fonts/Microsoft-YaHei-Light.ttc');
+}
+
+@font-face{
+  font-family: 'YaHeiSemilight';
+  src : url('../fonts/Microsoft-YaHei-Semilight.ttc');
+}
+
+@font-face{
+  font-family: 'msyh';
+  src : url('../fonts/msyh.ttc');
+}
+
+@font-face{
+  font-family: 'msyhbd';
+  src : url('../fonts/msyhbd.ttc');
+}
+
+@font-face{
+  font-family: 'msyhl';
+  src : url('../fonts/msyhl.ttc');
+}
+
+.cs-hd-ng{
+  width: 100%;
+  height: 100px;
+  background: #2B3155;
+  }
+  
+  .cs-app-name-log{
+  width: 300px;
+  height: 100px;
+  float: left;
+  }
+
+  .cs-app-log{
+  height: 65px;
+  width: 95px;
+  text-align: right;
+  float: left;
+  padding-top: 30px;
+  }
+
+  .head-pub{
+  width: 175px;
+  height: 100px;
+  float: left;
+  text-align: center;
+  cursor:pointer
+  }
+  
+  .cs-app-name{
+  width: 113px;
+  font-size: 24px;
+  font-family: YaHeiSemibold;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-top: 30px;
+  line-height: 95px;
+  margin-left: 9px;
+  }
+  
+  .css-hd-img-pub{
+  margin-top: 11px;
+  }
+  
+  .css-pub-text{
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 44px;
+  }
+  
+  .css-hd-sle{
+  background-color: #4838E1;
+  }
+
+  .css-head-selector-ifream{
+    height: 980px;
+    width: 100%;
+  }

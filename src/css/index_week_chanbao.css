@@ -1,0 +1,144 @@
+.week_body{
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+.week_left_body{
+    float: left;
+    width: 680px;
+    height: 100%;
+}
+.week_time{
+    width: 680px;
+    height: 50%;
+}
+.week_start_time{
+    width: 475px;
+    height: 111px;
+    margin-left: 111px;
+    margin-top: 62px;
+    border: 1px solid #ABC2FB;
+    opacity: 0.8;
+}
+.week_run_time{
+    position: absolute;
+    width: 76px;
+    height: 20px;
+    font-size: 16px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #000000;
+    margin-top: 48px;
+    margin-left: 70px;
+}
+.week_run_time1{
+    position: absolute;
+    width: 148px;
+    height: 28px;
+    font-size: 24px;
+    color: #5880F4;
+    margin-top: 45px;
+    margin-left: 278px;
+}
+.week_run_times{
+    width: 475px;
+    height: 111px;
+    margin-left: 111px;
+    margin-top: 23px;
+    border: 1px solid #ABC2FB;
+    opacity: 0.8;
+}
+.week_run_times1{
+    position: absolute;
+    width: 76px;
+    height: 20px;
+    font-size: 16px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #000000;
+    margin-top: 48px;
+    margin-left: 70px;
+}
+.week_run_time2{
+    position: absolute;
+    width: 148px;
+    height: 28px;
+    font-size: 24px;
+    color: #5880F4;
+    margin-top: 45px;
+    margin-left: 278px;
+}
+.week_right_body{
+    float: left;
+    width: 1080px;
+    height: 100%;
+
+}
+.week_table1{
+    width: 994px;
+    height: 415px;
+    margin-top: 30.5px;
+    border: 1px solid #ABC2F8;
+}
+.week_table1_head{
+    width: 100%;
+    height: 65px;
+}
+.week_table1_img{
+    float: left;
+    width: 23px;
+    height: 22px;
+    margin-top: 24px;
+    margin-left: 23px;
+}
+.week_table1_text{
+    float: left;
+    width: 129px;
+    height: 22px;
+    margin-top: 24px;
+    margin-left: 8px;
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #5880F4;
+}
+.week_line{
+    width: 100%;border: 1px solid #ABC2F8;margin-top: 0px;
+}
+.week_table1_tb{
+    width: 994px;
+    height: 348px;
+}
+.week_table2{
+    width: 994px;
+    height: 415px;
+    margin-top: 27px;
+    border: 1px solid #ABC2F8;
+}
+.week_table2_head{
+    width: 100%;
+    height: 65px;
+}
+.week_table2_img{
+    float: left;
+    width: 23px;
+    height: 22px;
+    margin-top: 24px;
+    margin-left: 23px;
+}
+.week_table2_text{
+    float: left;
+    width: 86px;
+    height: 22px;
+    margin-top: 23px;
+    margin-left: 10px;
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #5880F4;
+}
+.week_table2_tb{
+    width: 994px;
+    height: 348px;
+
+}

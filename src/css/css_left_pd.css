@@ -1,0 +1,190 @@
+
+html, body{
+    height: 100%;
+    overflow: hidden;
+}
+    
+.css-pd{
+    width: 100%;
+    height: 100%;
+    background-color:#FFFFFF;
+}
+.pb-denglu-text{
+    position: absolute;
+    margin-top: 362px;
+    margin-left: 749px;
+    width: 134px;
+height: 18px;
+font-size: 16px;
+font-family: Microsoft YaHei;
+font-weight: 400;
+color: #2B3155;
+line-height: 45px;
+}
+.text-mima{
+    width: 326px;
+    height: 57px;
+    position: absolute;
+    font-size: 30px;
+    margin-top: 413px;
+    margin-left: 659px;
+    text-align: center;
+}
+.text-button{
+    width: 326px;
+    height: 57px;
+    margin-top: 505px;
+    margin-left: 659px;
+    background-color: #5880F4;
+    border-radius: 6px;
+}
+
+.css_pd_banci{
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+
+
+.css_pd_select{
+    display: none;
+}
+.pb_menu{
+    width: 100%;
+    height: 104px;
+}
+.pb_body{
+    float: left;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+.ZJbanci{
+    width: 168px;
+    height: 53px;
+    margin-top: 51px;
+    margin-left: 44px;
+    background-color: #5880F4;
+    font-size: 16px;
+    font-family: Microdoft YaHei;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 45px;
+}
+.css_pd_ban{
+    float: left;
+    width: 519px;
+    height: 215px;
+    margin-top: 37px;
+    margin-left: 43px;
+    background-color: red;
+    border: 1px solid #5880F4;
+}
+.banci{
+    float: left;
+    width: 519px;
+    height: 215px;
+    margin-top: 37px;
+    margin-left: 43px;
+    border: 1px solid #5880F4;
+}
+.bc_head{
+    float: left;
+    width: 100%;
+    height: 49px;
+    background-color: #FFF2F8FF;
+}
+.bc_text_num{
+    width: 50px;
+    height: 20px;
+    margin-top: 18px;
+    margin-left: 18px;
+    font-size: 16px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #5880F4;
+    line-height: 45px;
+}
+.bc_text_true{
+    width: 50px;
+    height: 30px;
+    margin-left: 387px;
+    font-size: 16px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #5880F4;
+    line-height: 45px;  
+}
+
+.bc_line1{
+    float: left;
+    width: 100%;
+    border: 1px solid#CEE2FF;
+}
+
+.bc_body{
+    float: left;
+    width: 100%;
+    height: 162px;
+    background-color: #FFF2F8FF;
+}
+.bc_time{
+    float: left;
+    width: 100%;
+    height: 57px;
+
+}
+.bc_time_text{
+    margin-top: 41px;
+    font-size: 14px;
+    font-family: Microsoft YaHei;
+    color: #2B3155;
+ 
+}
+.bc_time_text1{
+    float: left;
+    margin-left: 97px;
+}
+.bc_line2{
+    float: left;
+    width: 70px;
+    margin-top: 48px;
+    margin-left: 70px;
+    border: 1px solid #5880F4;
+}
+.bc_time_text2{
+    float: right;
+    margin-right: 114px;
+}
+.bc_time_last{
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+.time1{
+    height: 40px;
+    font-size: 30px;
+    margin-top: 36px;
+    margin-left: 82px;
+}
+.time2{
+    float: right;
+    height: 40px;
+    font-size: 30px;
+    margin-top: 36px;
+    margin-right: 82px;
+}
+.bc_line3{
+    float: left;
+    width: 196px;
+    border: 1px solid #5880F4;
+    margin-top: 7px;
+    margin-left: 38px;
+}
+.bc_line4{
+    float: right;
+    width: 196px;
+    border: 1px solid #5880F4;
+    margin-top: 7px;
+    margin-right: 45px;
+}

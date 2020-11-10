@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/head_public.css">
+    <link rel="stylesheet" href="../css/css_left_pd.css">
+</head>
+<body>
+    <!--最外层-->
+    <div id="pb1" class="css-pd "  >
+        <span class="pb-denglu-text">请输入登陆密码</span>
+        <input type="password" id="pwd" class="text-mima" name="密码框" value="" >
+        <input type="button" class="text-button" name="登陆" value="确定"  onclick="pd_dl()">
+    </div>
+    <div id="pb2" class="css_pd_banci css_pd_select" >
+        <div class="pb_menu">
+            
+            <input type="button" class="ZJbanci" name="增加班次" value="增加班次" onclick="pd_zjbanci()">
+        </div>
+        <div id="pb2_pd_body" class="pb_body"></div>
+    </div>
+</body>
+    <script type="text/javascript" src='../js/net-js/jquery.1.12.4.min.js'></script>
+    <script type="text/javascript" src='../js/head_public.js'></script>
+    <script type="text/javascript" src='../js/index_pb_denglu.js'> </script>
+
+</html>
